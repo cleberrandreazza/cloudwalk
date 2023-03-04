@@ -1,0 +1,56 @@
+import styled from 'styled-components'
+
+
+export const CharactersStyle = styled.div`
+    .container-characters {
+        h2 {
+            color: #333333;
+            font-size: 34px;
+            line-height: 40px;
+            margin-bottom: 43px;
+        }
+
+        .contents {
+            grid-template-columns: repeat(4, 1fr);
+            display: grid;
+            column-gap: 30px;
+
+            .container-people {
+                margin-bottom: 110px;
+            }
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 200px;
+            img {
+                width: 70px;
+            }
+        }
+
+    }
+    .load-more {
+        margin-bottom: 200px;
+        display: flex;
+        justify-content: center;
+
+        button {
+            background-color: transparent;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 14px;
+            line-height: 46px;
+            color: #002B53;
+            border: 1px solid #002B53;
+            padding: 0 200px;
+            cursor: pointer;
+            transition: .3s;
+            font-family: 'Helvetica Neue', sans-serif;
+            &:hover{
+                background: #002B53;
+                color: #fff;
+            }
+        }
+    }
+`
