@@ -43,4 +43,28 @@ export const CharactersStyle = styled.div`
             color: #757575;
         }
     }
+    @media screen and (max-width: 800px) {
+        .container-people{
+            display: flex;
+            align-items: flex-start;
+            .image{
+                width: 115px;
+                height: 130px;
+                margin-right: 12px;
+            }
+            .content{
+                h4{
+                    font-size: 20px;
+                    margin: 0;
+                    margin-bottom: 5px;
+                }
+                h5{
+                    font-size: 15px;
+                }
+                p{
+                    display: none;
+                }
+            }
+        }
+    }
 `

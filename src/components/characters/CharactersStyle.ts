@@ -53,4 +53,31 @@ export const CharactersStyle = styled.div`
             }
         }
     }
+    @media screen and (max-width: 1024px) {
+        .container-characters{
+            .contents{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .container-characters{
+            h2{
+                font-size: 32px;
+                line-height: 40px;
+                margin-bottom: 32px;
+            }
+            .contents{
+                grid-template-columns: repeat(1,1fr);
+                .container-people{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .load-more{
+            button{
+                padding: 0 55px;
+            }
+        }
+    }
 `

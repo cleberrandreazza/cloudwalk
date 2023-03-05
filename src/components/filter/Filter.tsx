@@ -1,4 +1,4 @@
-import { FilterItem, Planet, PlanetResponse } from '@/interfaces/planets';
+import { FilterItem } from '@/interfaces/planets';
 import { Dispatch, SetStateAction, useState } from 'react';
 import { FilterStyle } from './FilterStyle';
 
@@ -22,6 +22,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
 
     const checkItem = (planetName: string) => {
         const newItens = itens.map((planet) => {
+            planet.checked = false;
             if (planet.name === planetName)
                 planet.checked = !planet.checked;
             return planet
@@ -45,7 +46,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
     };
 
 
-    const unCheckAll = () => {
+    const unCheckAll = (mobile = false) => {
         const newItens = itens.map((planet) => {
             planet.checked = false;
             return planet
@@ -53,11 +54,9 @@ function Filter({ itens, setItens }: PlanetsInterface) {
 
         setItens(newItens)
         setCheckAll(true)
+        if (!mobile)
+            setIsActive(false)
     };
-
-    const test = () => {
-        console.log('blur')
-    }
 
 
     return (
@@ -70,11 +69,21 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                                 <span>
                                     <p onClick={handleClick}>
                                         {itens.filter(x => x.checked).length > 0 && itens.filter(x => x.checked).length != itens.length
-                                            ? itens.filter(x => x.checked).map(x => x.name + ', ')
+                                            ? itens.filter(x => x.checked).map(x => x.name)
                                             : 'All'
                                         }
                                     </p>
-                                    <div className="box-itens" onBlur={test}>
+                                    <div className="box-itens">
+                                        <div className="content-mobile">
+                                            <div className="content-top">
+                                                Filter By
+                                                <div className="close" onClick={handleClick}></div>
+                                            </div>
+                                            <div className="buttons">
+                                                <button className="clear" onClick={() => unCheckAll(true)}>CLEAR ALL</button>
+                                                <button className="apply" onClick={handleClick}>APPLY</button>
+                                            </div>
+                                        </div>
                                         <div className="item">
                                             <div className="search">
                                                 <input type="text" placeholder='Search by name' onChange={event => setQuery(event.target.value)} value={query} />
@@ -103,7 +112,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                                 </span>
                             </div>
                         </div>
-                        <button className={itens.filter(x => x.checked).length > 0 ? 'active' : ''} onClick={unCheckAll}>clear all</button>
+                        <button className={itens.filter(x => x.checked).length > 0 ? 'active clear-all' : 'clear-all'} onClick={() => unCheckAll()}>clear all</button>
                     </div>
                 </div>
             </FilterStyle >

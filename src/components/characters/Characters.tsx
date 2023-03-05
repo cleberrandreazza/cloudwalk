@@ -1,4 +1,4 @@
-import { People, PeopleResponse } from "@/interfaces/people";
+import { People } from "@/interfaces/people";
 import { useState } from "react";
 import Character from "../character/Character";
 import { CharactersStyle } from "./CharactersStyle"
@@ -23,6 +23,7 @@ function Characters({ data }: PeopleInterface) {
                     {pageNumber * 8 < data.length && <div className="load-more">
                         <button onClick={loadMore}>LOAD MORE</button>
                     </div>}
+                    {data.length === 0 && <div><b>Sorry, Nothing found </b><br />Try resetting the filters</div>}
                 </div>
             </CharactersStyle>
         </>

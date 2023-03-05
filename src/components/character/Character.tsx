@@ -2,7 +2,6 @@
 import { People } from '@/interfaces/people';
 import { CharactersStyle } from './CharacterStyle';
 import Image from 'next/image'
-import loader from '../../../public/img/loading.svg';
 
 interface PeopleInterface {
     item: People;
@@ -20,11 +19,13 @@ function Character({ item }: PeopleInterface) {
                             height={500}
                         />
                     </div>
-                    <h4>{item.name}</h4>
-                    <h5>{item.homeworld_string}</h5>
-                    <p>HEIGHT • {item.height}</p>
-                    <p>MASS • {item.mass}</p>
-                    <p>GENDER • {item.gender}</p>
+                    <div className="content">
+                        <h4>{item.name}</h4>
+                        <h5>{item.homeworld_string}</h5>
+                        <p>HEIGHT • {item.height}</p>
+                        <p>MASS • {item.mass}</p>
+                        <p>GENDER • {item.gender}</p>
+                    </div>
                 </div>
             </CharactersStyle>
         </>

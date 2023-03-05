@@ -30,6 +30,7 @@ export const FilterStyle = styled.div`
                 color: #002B56;
                 position: relative;
                 max-width: 90%;
+                padding-right: 20px;
                 &:after {
                     content: '';
                     position: absolute;
@@ -59,7 +60,7 @@ export const FilterStyle = styled.div`
         }
     }
 
-    button {
+    .clear-all {
         color: #C8C8C8;
         background-color: transparent;
         border: 1px solid #C8C8C8;
@@ -81,6 +82,9 @@ export const FilterStyle = styled.div`
             background: #002B53;
             color: #fff;
         }
+    }
+    .content-mobile{
+        display: none;
     }
 
     .box-itens {
@@ -168,4 +172,93 @@ export const FilterStyle = styled.div`
         }
     }
 }
+@media screen and (max-width: 800px) {
+  .container_filter {
+    border-bottom: 0;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    .filter{
+        width: 100%;
+        .label{
+            display: flex;
+            span{
+                max-width: initial;
+                flex: 1;
+            }
+        }
+    }
+    .clear-all{
+        display: none;
+    }
+    .box-itens{
+        position: fixed;
+        max-width: inherit;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        max-height: 100vh;
+        .item{
+            width: 100%;
+            .search{
+                width: 100%;
+            }
+        }
+    }
+    .content-mobile{
+        margin: 0 -15px;
+        display: block;
+        .content-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #C8C8C8;
+            padding: 0 15px;
+            padding-bottom: 16px;
+            color: #606060;
+            margin-bottom: 15px;
+            .close{
+                display: block;
+                width: 16px;
+                height: 16px;
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    background:url('/img/close.svg') no-repeat center center / cover;
+                }
+            }
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #C8C8C8;
+            margin-bottom: 15px;
+            padding: 0 15px;
+            padding-bottom: 16px;
+            button{
+                width: 48%;
+                line-height: 40px;
+                border-radius: 2px;
+                text-transform: uppercase;
+                display: block;
+                background: transparent;
+                border: 1px solid #002B56;
+                font-family: 'Helvetica Neue',sans-serif;
+                &.clear{
+                    color: #002B56;
+                }
+                &.apply{
+                    background-color: #002B56;
+                    color: #fff;
+                }
+            }
+        }
+    }
+  }
+}
+
 `

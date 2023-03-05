@@ -18,7 +18,29 @@ export const HeaderStyle = styled.div`
             // font-weight: 300;
             font-size: 22px;
             line-height: 32px;
-            max-width: 50%;
+            max-width: 50vw;
         }
     }
+    @media screen and (max-width: 1024px) {
+        .container_header{
+            p{
+                max-width: 100vw;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .container_header{
+            h1{
+                font-size: 32px;
+                line-height: 40px;
+                margin-bottom: 10px;
+            }
+            p{
+               font-size: 16px;
+               line-height: 24px;
+            }
+        }
+    }
+
 `
