@@ -23,7 +23,7 @@ function Characters({ data }: PeopleInterface) {
                     {pageNumber * 8 < data.length && <div className="load-more">
                         <button onClick={loadMore}>LOAD MORE</button>
                     </div>}
-                    {data.length === 0 && <div><b>Sorry, Nothing found </b><br />Try resetting the filters</div>}
+                    {data.length === 0 && <div className="search-empty"><span>Sorry, Nothing found </span><br />Try resetting the filters</div>}
                 </div>
             </CharactersStyle>
         </>

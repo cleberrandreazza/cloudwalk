@@ -18,8 +18,8 @@ export const FilterStyle = styled.div`
 
     .filter {
         font-size: 16px;
-
         .label {
+            font-weight: 400;
             span {
                 cursor: pointer;
                 margin-left: 13px;
@@ -66,12 +66,13 @@ export const FilterStyle = styled.div`
         text-transform: uppercase;
         line-height: 36px;
         padding: 0 39px;
-        font-family: 'Helvetica Neue', sans-serif;
         transition: .3s;
         cursor: pointer;
         transition:.3s;
         pointer-events: none;
         white-space: nowrap;
+        font-weight: 500;
+        letter-spacing: 0.8px;
         &.active{
             pointer-events: inherit;
             border-color: #002B56;
@@ -111,7 +112,7 @@ export const FilterStyle = styled.div`
             display: flex;
             align-items: center;
             color: #606060;
-
+            letter-spacing: 0.5px;
             &.active {
                 .check {
                     background-color: black;
@@ -158,14 +159,20 @@ export const FilterStyle = styled.div`
                     border-bottom: 1px solid #C8C8C8;
                     outline: 0;             
                     line-height: 30px;
-                    font-family: 'Helvetica 35 Thin', sans-serif;
                 }
                 .close-search{
                     position: absolute;
                     right: 0;
                     top: 50%;
                     transform: translateY(-50%);
-                    font-weight: bold;
+                    font-weight: 300;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: .3s;
+                    &.open{
+                        pointer-events: auto;
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -246,7 +253,6 @@ export const FilterStyle = styled.div`
                 display: block;
                 background: transparent;
                 border: 1px solid #002B56;
-                font-family: 'Helvetica Neue',sans-serif;
                 &.clear{
                     color: #002B56;
                 }

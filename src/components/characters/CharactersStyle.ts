@@ -30,6 +30,14 @@ export const CharactersStyle = styled.div`
         }
 
     }
+    .search-empty{
+        line-height: 25px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        span{
+            font-weight: normal;
+        }
+    }
     .load-more {
         margin-bottom: 200px;
         display: flex;
@@ -46,7 +54,7 @@ export const CharactersStyle = styled.div`
             padding: 0 200px;
             cursor: pointer;
             transition: .3s;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 500;
             &:hover{
                 background: #002B53;
                 color: #fff;

@@ -11,7 +11,7 @@ interface PlanetsInterface {
 function Filter({ itens, setItens }: PlanetsInterface) {
     const [isActive, setIsActive] = useState(false);
     const [query, setQuery] = useState("");
-    const ref = useDetectClickOutside({ onTriggered: () => closeDropdown()});
+    const ref = useDetectClickOutside({ onTriggered: () => closeDropdown() });
     const [checkAll, setCheckAll] = useState(false);
 
 
@@ -24,6 +24,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
 
     const emptySearch = () => {
         setQuery("");
+        setIsActive(true);
     };
 
     const checkItem = (planetName: string) => {
@@ -41,14 +42,14 @@ function Filter({ itens, setItens }: PlanetsInterface) {
     };
 
     const checkAllFetch = () => {
-        if(checkAll){
+        if (checkAll) {
 
             setCheckAll(current => !current);
             const newItens = itens.map((planet) => {
                 planet.checked = checkAll;
                 return planet
             })
-    
+
             setItens(newItens)
         }
 
@@ -96,9 +97,9 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                                         <div className="item">
                                             <div className="search">
                                                 <input type="text" placeholder='Search by name' onChange={event => setQuery(event.target.value)} value={query} />
-                                                {query && <div className="close-search" onClick={emptySearch} >
+                                                <div className={`close-search ${query ? 'open' : ''}  `} onClick={emptySearch} >
                                                     x
-                                                </div>}
+                                                </div>
                                             </div>
                                         </div>
                                         {!query && <div className={`item ${!checkAll ? 'active' : ''}`} onClick={checkAllFetch}>

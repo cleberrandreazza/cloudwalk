@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 export const CharactersStyle = styled.div`
     .container-people {
+        font-weight: normal;
         .image {
             overflow: hidden;
             height: 230px;
@@ -25,6 +26,7 @@ export const CharactersStyle = styled.div`
             line-height: 28px;
             letter-spacing: 1px;
             margin-bottom: 5px;
+            font-weight: normal;
         }
 
         h5 {
@@ -33,6 +35,7 @@ export const CharactersStyle = styled.div`
             line-height: 28px;
             letter-spacing: 1px;
             margin-bottom: 13px;
+            font-weight: normal;
         }
 
         p {
@@ -40,6 +43,7 @@ export const CharactersStyle = styled.div`
             line-height: 16px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            font-weight: normal;
             color: #757575;
         }
     }

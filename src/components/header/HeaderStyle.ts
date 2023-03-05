@@ -7,7 +7,6 @@ export const HeaderStyle = styled.div`
         margin-bottom: 40px;
 
         h1 {
-            font-weight: 300;
             font-size: 54px;
             line-height: 64px;
             margin-bottom: 25px;
@@ -15,10 +14,10 @@ export const HeaderStyle = styled.div`
         }
 
         p {
-            // font-weight: 300;
             font-size: 22px;
             line-height: 32px;
             max-width: 50vw;
+            letter-spacing: 0.916667px;
         }
     }
     @media screen and (max-width: 1024px) {

@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+
 
 * {
   box-sizing: border-box;
@@ -12,13 +12,13 @@ body{
 }
 
 html {
-  font-family: 'Helvetica 35 Thin', sans-serif;
-  font-weight: 100;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 300;
   color: #666666;
 }
-h1,h2,h3,h5{
+h1,h2,h3,h4,h5{
   margin: 0;
-  font-weight: 100;
+  font-weight: 300;
 }
 p{
   margin: 0;
@@ -29,3 +29,43 @@ p{
     margin: 0 25px;
   }
 }
+
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Thin.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Light.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Medium.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
