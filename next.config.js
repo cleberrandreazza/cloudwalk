@@ -6,20 +6,16 @@ module.exports = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"]
-    });
+      use: ['@svgr/webpack'],
+    })
 
-    return config;
+    return config
   },
   compiler: {
-    styledComponents: true
+    styledComponents: true,
   },
   images: {
     deviceSizes: [82, 110, 140, 640, 750, 828, 1080, 1200, 1920],
     domains: ['picsum.photos', 'localhost'],
   },
 }
-
-
-
-
