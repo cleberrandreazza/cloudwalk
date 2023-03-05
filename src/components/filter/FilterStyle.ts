@@ -37,7 +37,6 @@ export const FilterStyle = styled.div`
                     right: 0;
                     top: 40%;
                     transform: translateY(-50%);
-                    pointer-events: none;
                     transition: .3s;
                     width: 7px;
                     height: 7px;

@@ -1,6 +1,7 @@
 import { FilterItem } from '@/interfaces/planets';
 import { Dispatch, SetStateAction, useState } from 'react';
 import { FilterStyle } from './FilterStyle';
+import { useDetectClickOutside } from 'react-detect-click-outside';
 
 interface PlanetsInterface {
     itens: FilterItem[],
@@ -10,8 +11,13 @@ interface PlanetsInterface {
 function Filter({ itens, setItens }: PlanetsInterface) {
     const [isActive, setIsActive] = useState(false);
     const [query, setQuery] = useState("");
-
+    const ref = useDetectClickOutside({ onTriggered: () => closeDropdown()});
     const [checkAll, setCheckAll] = useState(false);
+
+
+    const closeDropdown = () => {
+        setIsActive(false)
+    }
     const handleClick = () => {
         setIsActive(current => !current);
     };
@@ -35,13 +41,16 @@ function Filter({ itens, setItens }: PlanetsInterface) {
     };
 
     const checkAllFetch = () => {
-        setCheckAll(current => !current);
-        const newItens = itens.map((planet) => {
-            planet.checked = checkAll;
-            return planet
-        })
+        if(checkAll){
 
-        setItens(newItens)
+            setCheckAll(current => !current);
+            const newItens = itens.map((planet) => {
+                planet.checked = checkAll;
+                return planet
+            })
+    
+            setItens(newItens)
+        }
 
     };
 
@@ -65,7 +74,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                 <div className="container_filter">
                     <div className="container">
                         <div className="filter">
-                            <div className={`label ${isActive ? 'active' : ''}`}>Filter By:
+                            <div className={`label ${isActive ? 'active' : ''}`} ref={ref}>Filter By:
                                 <span>
                                     <p onClick={handleClick}>
                                         {itens.filter(x => x.checked).length > 0 && itens.filter(x => x.checked).length != itens.length
@@ -73,7 +82,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                                             : 'All'
                                         }
                                     </p>
-                                    <div className="box-itens">
+                                    <div className="box-itens" >
                                         <div className="content-mobile">
                                             <div className="content-top">
                                                 Filter By
@@ -112,7 +121,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                                 </span>
                             </div>
                         </div>
-                        <button className={itens.filter(x => x.checked).length > 0 ? 'active clear-all' : 'clear-all'} onClick={() => unCheckAll()}>clear all</button>
+                        <button className={itens.filter(x => x.checked).length > 0 && checkAll ? 'active clear-all' : 'clear-all'} onClick={() => unCheckAll()}>clear all</button>
                     </div>
                 </div>
             </FilterStyle >
