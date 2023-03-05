@@ -37,8 +37,8 @@ export default function Home({ planets, characters }: HomeProps) {
 }
 
 const getAllPlanets = async () => {
-  let hasMorePages: boolean = true;
-  let page: number = 1;
+  let hasMorePages = true;
+  let page = 1;
   let newPlanets = {} as PlanetResponse;
 
   while (hasMorePages) {
@@ -55,8 +55,8 @@ const getAllPlanets = async () => {
 }
 
 const getAllPeople = async () => {
-  let hasMorePages: boolean = true;
-  let page: number = 1;
+  let hasMorePages = true;
+  let page = 1;
   let newPeople = {} as PeopleResponse;
 
   while (hasMorePages) {

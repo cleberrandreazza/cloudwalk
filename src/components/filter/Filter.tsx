@@ -112,7 +112,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                                             } else if (filter.name.toLocaleLowerCase().includes(query.toLocaleLowerCase())) {
                                                 return filter;
                                             }
-                                        }).map((item, i) => (
+                                        }).map((item) => (
                                             <div className={`item ${item.checked ? 'active' : ''}`} key={item.name} onClick={() => checkItem(item.name)}>
                                                 <div className="check" ></div>
                                                 {item.name}

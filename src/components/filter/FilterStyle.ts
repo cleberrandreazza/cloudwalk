@@ -19,7 +19,7 @@ export const FilterStyle = styled.div`
     .filter {
         font-size: 16px;
         .label {
-            font-weight: 400;
+            font-weight: normal;
             span {
                 cursor: pointer;
                 margin-left: 13px;
