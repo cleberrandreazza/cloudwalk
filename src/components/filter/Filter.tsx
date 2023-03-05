@@ -57,12 +57,12 @@ function Filter({ itens, setItens }: PlanetsInterface) {
 
     const unCheckAll = (mobile = false) => {
         const newItens = itens.map((planet) => {
-            planet.checked = false;
+            planet.checked = true;
             return planet
         })
 
         setItens(newItens)
-        setCheckAll(true)
+        setCheckAll(false)
         if (!mobile)
             setIsActive(false)
     };
