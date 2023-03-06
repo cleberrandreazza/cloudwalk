@@ -13,7 +13,7 @@ function Characters({ data }: PeopleInterface) {
   return (
     <>
       <CharactersStyle>
-        <div className="container container-characters">
+        <section className="container container-characters">
           <h2>All Characters</h2>
           <div className="contents">
             {data.slice(0, pageNumber * 8).map((item) => (
@@ -36,7 +36,7 @@ function Characters({ data }: PeopleInterface) {
               Try resetting the filters
             </div>
           )}
-        </div>
+        </section>
       </CharactersStyle>
     </>
   )

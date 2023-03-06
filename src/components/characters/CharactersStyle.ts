@@ -66,7 +66,7 @@ export const CharactersStyle = styled.div`
       }
     }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 500px) {
     .container-characters {
       h2 {
         font-size: 32px;
