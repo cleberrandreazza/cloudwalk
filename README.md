@@ -12,21 +12,21 @@ With this project, we hope to deliver a high-quality website that offers users a
 
 ## 2. Tech stack
 
-Project developed with Next.js using Typescript
+Project developed with Next.js using Typescript.
 
 Styled-Components for styling.
 
-Project configured with Eslint, Prettier and Husky for code standardization
+Project configured with Eslint, Prettier and Husky for code standardization.
 
-For testing, Jest was configured to cover 90%
+For testing, Jest was configured to cover 90%.
 
 ## 2. Improvements
 
 Used Next.js in order to serve the static html improving the loading of the content and also to cache all requests from the planets and people apis on the server (15 requests are called in build time and updated every 60s, or according to the configuration in next, if necessary), so the client handles only the cached arrays and there is no need to make calls, making the project faster for the end user.
 
-A filter by name was added in the select of Planets
+A filter by name was added in the select of Planets.
 
-Optimized images with the next image component
+Optimized images with the next image component.
 
 Project tested on the Google Page Speed platform with the following results:
 
