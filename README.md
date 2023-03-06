@@ -26,6 +26,7 @@ Project tested on the Google Page Speed platform with the following results:
 ## Getting Started
 
 ```bash
+npm i
 npm run dev
 ```
 
@@ -41,3 +42,7 @@ npm run start
 ```bash
 npm run test
 ```
+
+## Demo
+
+[Link for demo](https://cloudwalk-ten.vercel.app/)
