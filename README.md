@@ -2,7 +2,13 @@
 
 ## 1. Introduction
 
-This is a test developed in React + Next.js
+Our goal with this project is to create a highly optimized and responsive website that guarantees a fast and consistent browsing experience for users. To do this, we will use Next.js, a web development framework based on React, which allows us to use concepts such as SSR (Server-Side Rendering) and SSG (Static Site Generation) to create highly performant pages.
+
+To ensure layout fidelity, we will use tools such as Styled-componts, which allows us to encapsulate the CSS of each component in a single scope, avoiding conflicts with styles of other components. In addition, we will use linting tools such as ESLint and Prettier to maintain a consistent code standard and avoid formatting errors.
+
+For optimization, we will use techniques such as lazy loading, which loads images and components only when necessary, and image compression, which reduces file size to speed up page loading time. In addition, we will use a Content Delivery Network (CDN), which stores website static files on servers distributed around the world, allowing content to be delivered more quickly to users.
+
+With this project, we hope to deliver a high-quality website that offers users a fast, consistent, and attractive browsing experience. Thank you for the opportunity to present our project, and we are available for any questions or further clarifications.
 
 ## 2. Tech stack
 
