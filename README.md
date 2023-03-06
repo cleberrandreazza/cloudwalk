@@ -25,15 +25,11 @@ Project tested on the Google Page Speed platform with the following results:
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
 npm run dev
 ```
 
-## Para building
-
-First, run the development server:
+## For building (production)
 
 ```bash
 npm run build
@@ -41,8 +37,6 @@ npm run start
 ```
 
 ## Tests
-
-First, run the development server:
 
 ```bash
 npm run test
