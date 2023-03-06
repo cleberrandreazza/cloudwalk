@@ -17,16 +17,20 @@ function Characters({ data }: PeopleInterface) {
           <h2>All Characters</h2>
           <div className="contents">
             {data.slice(0, pageNumber * 8).map((item) => (
-              <Character key={item.url} item={item} />
+              <div data-testid={item.url} key={item.url}>
+                <Character item={item} />
+              </div>
             ))}
           </div>
           {pageNumber * 8 < data.length && (
             <div className="load-more">
-              <button onClick={loadMore}>LOAD MORE</button>
+              <button onClick={loadMore} data-testid="loadMore">
+                LOAD MORE
+              </button>
             </div>
           )}
           {data.length === 0 && (
-            <div className="search-empty">
+            <div className="search-empty" data-testid="search-empty">
               <span>Sorry, Nothing found </span>
               <br />
               Try resetting the filters

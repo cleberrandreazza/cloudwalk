@@ -68,10 +68,14 @@ function Filter({ itens, setItens }: PlanetsInterface) {
         <div className="container_filter">
           <div className="container">
             <div className="filter">
-              <div className={`label ${isActive ? 'active' : ''}`} ref={ref}>
+              <div
+                className={`label ${isActive ? 'active' : ''}`}
+                ref={ref}
+                data-testid="label"
+              >
                 Filter By:
                 <span>
-                  <p onClick={handleClick}>
+                  <p onClick={handleClick} data-testid="handleClick">
                     {itens.filter((x) => x.checked).length > 0 &&
                     itens.filter((x) => x.checked).length != itens.length
                       ? itens.filter((x) => x.checked).map((x) => x.name)
@@ -102,10 +106,12 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                           placeholder="Search by name"
                           onChange={(event) => setQuery(event.target.value)}
                           value={query}
+                          data-testid="inputSearch"
                         />
                         <div
                           className={`close-search ${query ? 'open' : ''}  `}
                           onClick={emptySearch}
+                          data-testid="emptySearch"
                         >
                           x
                         </div>
@@ -115,6 +121,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                       <div
                         className={`item ${!checkAll ? 'active' : ''}`}
                         onClick={checkAllFetch}
+                        data-testid="checkAllFetch"
                       >
                         <div className="check"></div>
                         All
@@ -137,6 +144,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                           className={`item ${item.checked ? 'active' : ''}`}
                           key={item.name}
                           onClick={() => checkItem(item.name)}
+                          data-testid={item.name}
                         >
                           <div className="check"></div>
                           {item.name}
@@ -153,6 +161,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
                   : 'clear-all'
               }
               onClick={() => unCheckAll()}
+              data-testid="uncheckAll"
             >
               clear all
             </button>
