@@ -12,9 +12,9 @@ With this project, we hope to deliver a high-quality website that offers users a
 
 ## 2. Tech stack
 
-Project developed in Next.js using Typescript
+Project developed with Next.js using Typescript
 
-Styled-Components was used for styling.
+Styled-Components for styling.
 
 Project configured with Eslint, Prettier and Husky for code standardization
 
