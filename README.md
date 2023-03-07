@@ -29,6 +29,7 @@ A filter by name was added in the select of Planets.
 Optimized images with the next image component.
 
 Project tested on the Google Page Speed platform with the following results:
+[link](https://pagespeed.web.dev/report?url=https%3A%2F%2Fcloudwalk-ten.vercel.app%2F)
 
 ![Google page Speed](https://i.imgur.com/AAEg6mS.png)
 
