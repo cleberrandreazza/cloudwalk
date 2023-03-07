@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderStyle = styled.div`
+export const HeaderStyle = styled.header`
   .container_header {
     margin-top: 40px;
     margin-bottom: 40px;

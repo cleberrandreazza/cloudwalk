@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <HeaderStyle>
-        <header className="container">
+        <div className="container">
           <div className="container_header">
             <h1>Star Wars Characters</h1>
             <p>
@@ -12,7 +12,7 @@ function Header() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-        </header>
+        </div>
       </HeaderStyle>
     </>
   )

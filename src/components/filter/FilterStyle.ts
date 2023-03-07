@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const FilterStyle = styled.div`
+export const FilterStyle = styled.nav`
   .container_filter {
     padding: 25px 0;
     border: 1px solid #e6e6e6;

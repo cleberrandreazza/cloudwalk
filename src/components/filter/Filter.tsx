@@ -65,7 +65,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
   return (
     <>
       <FilterStyle>
-        <nav className="container_filter">
+        <div className="container_filter">
           <div className="container">
             <div className="filter">
               <div
@@ -166,7 +166,7 @@ function Filter({ itens, setItens }: PlanetsInterface) {
               clear all
             </button>
           </div>
-        </nav>
+        </div>
       </FilterStyle>
     </>
   )

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CharactersStyle = styled.div`
+export const CharactersStyle = styled.section`
   .container-characters {
     h2 {
       color: #333333;
