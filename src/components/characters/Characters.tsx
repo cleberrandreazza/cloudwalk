@@ -17,9 +17,9 @@ function Characters({ data }: PeopleInterface) {
           <h2>All Characters</h2>
           <div className="contents">
             {data.slice(0, pageNumber * 8).map((item) => (
-              <div data-testid={item.url} key={item.url}>
+              <article data-testid={item.url} key={item.url}>
                 <Character item={item} />
-              </div>
+              </article>
             ))}
           </div>
           {pageNumber * 8 < data.length && (

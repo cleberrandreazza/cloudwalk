@@ -9,8 +9,8 @@ function Character({ item }: PeopleInterface) {
   return (
     <>
       <CharactersStyle>
-        <article className="container-people">
-          <div className="image">
+        <div className="container-people">
+          <figure className="image">
             <Image
               src={`https://picsum.photos/2${
                 item.height ? item.height : '00'
@@ -19,7 +19,7 @@ function Character({ item }: PeopleInterface) {
               width={500}
               height={500}
             />
-          </div>
+          </figure>
           <div className="content">
             <h4>{item.name}</h4>
             <h5>{item.homeworld_string}</h5>
@@ -27,7 +27,7 @@ function Character({ item }: PeopleInterface) {
             <p>MASS • {item.mass}</p>
             <p>GENDER • {item.gender}</p>
           </div>
-        </article>
+        </div>
       </CharactersStyle>
     </>
   )

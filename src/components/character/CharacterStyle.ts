@@ -6,8 +6,10 @@ export const CharactersStyle = styled.div`
     .image {
       overflow: hidden;
       height: 230px;
-      margin-bottom: 16px;
       position: relative;
+      margin: 0;
+      margin-bottom: 16px;
+      flex: none;
       img {
         position: absolute;
         left: 50%;
